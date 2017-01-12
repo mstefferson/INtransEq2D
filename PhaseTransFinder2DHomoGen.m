@@ -1,10 +1,10 @@
 % PhaseTransFinder2D
-clear
+function PhaseTransFinder2D()
 % Add paths just in case
-addpath('C:/Users/MWS/Documents/MATLAB/Programs/MathRoutines/');
+addpath('./src');
 
 % Grid, vec, and coefficient things
-trial = 2;
+%trial = 2;
 N  = 10;          % How many different concentrations to use
 Nx = 1000;        % Spatial grid points
 Nc = 15;          % # Coefficients

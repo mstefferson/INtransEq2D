@@ -1,7 +1,7 @@
 % PhaseTransFinder3D
-clear
+function PhaseTransFinder2D()
 % Add paths just in case
-addpath('C:/Users/MWS/Documents/MATLAB/Programs/MathRoutines/');
+addpath('./src');
 
 % Grid, vec, and coefficient things
 trial = 3;

@@ -21,12 +21,14 @@
 % f_mat =  [ f(a_2) ; f(a_2, a_4); ...; f(a_2, a_4,...a_{2Nc})
 
 function [CoeffMat, f_best] = EqDistMakerMain3D(bc, Nc,Nx,plotme)
+addpath('./src')
 % bc  = 5;      % Scaled concentration. 
 % Nc = 10;       % Number of coefficients.
 
 
 % Integration stuff
-x = linspace(-1,1,Nx);
+dx = 2 / Nx;
+x = -1 : dx : 1 - dx;
 
 % Calculate the coefficients of the expansion
 % CoeffMat = CoeffCalcExpLeg3D_test(Nc,x,bc,d2nVec);

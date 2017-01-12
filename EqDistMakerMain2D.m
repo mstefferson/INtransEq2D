@@ -21,13 +21,15 @@
 % f_mat =  [ f(a_2) ; f(a_2, a_4); ...; f(a_2, a_4,...a_{2Nc})
 
 function [CoeffMat, f_best] = EqDistMakerMain2D(bc, Nc,Nx,plotme)
+addpath('./src')
 % bc  = 5;      % Scaled concentration. 
 % Nc = 10;       % Number of coefficients.
 
 
 % Integration stuff
 % phi = linspace(-pi,pi,Nx);
-phi = linspace(0,2*pi-2*pi/Nx,Nx);
+dphi = 2*pi / Nx;
+phi = 0 : dphi : 2*pi - dphi;
 
 % Calculate the coefficients of the expansion
 [Coeff_best, CoeffMat] = CoeffCalcExpCos2D(Nc,phi,bc);
